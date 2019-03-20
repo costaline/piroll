@@ -1,0 +1,172 @@
+.site-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  min-height: 100px;
+  @include list-reset;
+}
+
+.site-list__item {
+  display: flex;
+  align-items: center;
+
+  &:last-of-type {
+    .site-list__link {
+      padding-right: 0;
+    }
+  }
+}
+
+.site-list__link {
+  display: block;
+  padding: 15px;
+
+  text-decoration: none;
+  color: #191919;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+
+  &--active {
+    color: #10c9c3;
+  }
+
+  &:hover[href] {
+    color: red;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $lg) {
+
+  .site-list__item {
+    &:last-of-type {
+      .site-list__link {
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+
+  .page-header__wrapper {
+    display: block;
+  }
+
+  .page-header__logo {
+    padding-top: 20px;
+
+    text-align: center;
+  }
+
+  .main-nav {
+    position: relative;
+    min-height: 54px;
+  }
+
+  .site-list {
+    min-height: 50px;
+  }
+
+  .site-list__link {
+    padding-left: 30px;
+    width: 100%;
+
+    font-weight: bold;
+  }
+
+  .main-nav__toggle {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: 3;
+
+    display: block;
+    width: 54px;
+    height: 54px;
+
+    background-color: transparent;
+    border: none;
+    
+    cursor: pointer;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 15px;
+      left: 10px;
+
+      display: block;
+      width: 30px;
+      height: 2px;
+
+      background-color: black;
+
+      box-shadow:
+        0 10px 0 0 black,
+        0 20px 0 0 black;
+    }
+  }
+
+  .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--opened {
+
+    & .site-list {
+      position: absolute;
+      z-index: 2;
+
+      width: 100%;
+
+      background-color: #e7e7e7;
+      opacity: 0.95;
+    }
+
+    & .site-list__link {
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+
+  .main-nav--closed {
+
+    .site-list {
+      min-height: 50px;
+    }
+
+    & .site-list__link {
+      display: none;
+    }
+
+    & .site-list__link--active {
+      display: block;
+    }
+  }
+
+  .main-nav--nojs {
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .site-list__link {
+      display: block;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+
+    .site-list {
+      margin-bottom: 50px;
+    }
+  }
+}

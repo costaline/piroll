@@ -1,0 +1,35 @@
+.footer-nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  @include list-reset;
+
+  @media (max-width: $sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-nav__item {
+  margin-right: 55px;
+
+  @media (max-width: $sm) {
+    margin-right: 0;
+    width: 25%;
+  }
+
+  @media (max-width: 400px) {
+    width: 50%;
+  }
+}
+
+.footer-nav__link {
+  text-decoration: none;
+  color: #bcbcbc;
+  font-family: 'Nunito';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.07px;
+}

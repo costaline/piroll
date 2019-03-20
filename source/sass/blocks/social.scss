@@ -1,0 +1,30 @@
+.social__list {
+
+  @include list-reset;
+
+  @media (max-width: $sm) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.social__item {
+  @media (max-width: $sm) {
+    width: 25%;
+  }
+
+  @media (max-width: 400px) {
+    width: 50%;
+  }
+}
+
+.social__link {
+  text-decoration: none;
+  color: #bcbcbc;
+  font-family: 'Nunito';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.07px;
+}

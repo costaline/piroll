@@ -1,0 +1,80 @@
+.about {
+  &--about {
+    padding-left: 54.8%;
+
+    background-image: url(../img/banner-bg-2.jpeg);
+    background-color: rgba(0,0,0,0.1);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center top;
+
+    @media (max-width: $md) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.about__title {
+  margin: 0;
+  margin-top: 84px;
+  margin-bottom: 15px;
+  padding: 0;
+
+  text-align: center;
+
+  &--about {
+    margin-top: 0;
+    padding-top: 121px;
+    margin-bottom: 14px;
+    
+    text-align: left;
+
+    @media (max-width: $md) {
+      padding-top: 60px;
+      text-align: center;
+    }
+  }
+}
+
+.about__text {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 0px;
+
+  text-align: center;
+
+  &--about {
+    max-width: 490px;
+    margin-left: 0;
+    margin-bottom: 22px;
+    
+    text-align: left;
+
+    @media (max-width: $md) {
+      max-width: 100%;
+    }
+  }
+}
+
+.about__sign {
+  display: block;
+  margin: 0 auto;
+  margin-top: 34px;
+  padding-left: 6px;
+
+  &--about {
+    margin-top: 36px;
+    margin-left: 0;
+    margin-bottom: 64px;
+
+    @media (max-width: $md) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: $sm) {
+      margin-bottom: 70px;
+    }
+  }
+}

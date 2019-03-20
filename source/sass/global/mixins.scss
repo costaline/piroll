@@ -1,0 +1,13 @@
+@mixin otl {
+  outline: 3px solid red;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin col($col-number: 1) {
+  width: $col-number * $col + ($col-number - 1) * $gap;
+}

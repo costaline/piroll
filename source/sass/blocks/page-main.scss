@@ -1,0 +1,39 @@
+.page-main__about {
+  padding-bottom: 73px;
+}
+
+.page-main__skills {
+  padding-bottom: 123px;
+
+  background-color: #f8f9f9;
+  background-image: url(../img/banner-bg-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+}
+
+.page-main__numbers {
+  background-color: #10c9c3;
+}
+
+.page-main__works {
+  background-color: #e9e9e9;
+}
+
+@media (max-width: $elg) {
+  .page-main__skills {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .page-main__about {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: $md) {
+  .page-main__skills {
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/montserrat-medium-webfont.woff) format('woff');
+  src: url(../fonts/montserrat-medium-webfont.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/nunito-regular-webfont.woff) format('woff');
+  src: url(../fonts/nunito-regular-webfont.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/nunito-bold-webfont.woff) format('woff');
+  src: url(../fonts/nunito-bold-webfont.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/nunito-regular-webfont.woff) format('woff');
+  src: url(../fonts/nunito-regular-webfont.woff2) format('woff2');
+}
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  font-style: normal;
+
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

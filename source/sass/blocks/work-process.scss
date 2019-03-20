@@ -1,0 +1,31 @@
+.work-process__title {
+  margin-bottom: 14px;
+  padding-top: 83px;
+
+  text-align: center;
+}
+
+.work-process__text {
+  max-width: 510px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  
+  text-align: center;
+}
+
+.work-process__video {
+  padding-bottom: 85px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: $md) {
+
+  .work-process__title {
+    padding-top: 30px;
+  }
+
+  .work-process__video {
+    padding-bottom: 0px;
+  }
+}

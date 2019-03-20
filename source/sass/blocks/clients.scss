@@ -1,0 +1,27 @@
+.clients__list {
+  min-height: 200px;
+  display: flex;
+  justify-content: space-between;
+  @include list-reset;
+}
+
+.clients__item {
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: $md) {
+  .clients__list {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -$gap;
+  }
+
+  .clients__item {
+    margin-left: $gap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

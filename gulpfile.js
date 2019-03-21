@@ -123,10 +123,23 @@ function watch() {
     gulp.watch("source/*.html", gulp.series(html, browserSyncReload));
 }
 
-// complex tasks
+// functions--pub
 
+function cleanghub() {
+  return del([
+    "../costaline.github.io/projects/piroll"
+  ], { force: true });
+}
+
+function copyghub() {
+  return gulp.src("build/**")
+    .pipe(gulp.dest("../costaline.github.io/projects/piroll"));
+}
+
+// complex tasks
 var build = gulp.series(clean, copy, gulp.parallel(style, html, script, images, sprite));
 var dev = gulp.series(build, watch);
+var publish = gulp.series(build, cleanghub, copyghub);
 
 // export tasks
 
@@ -136,9 +149,15 @@ exports.sprite = sprite;
 exports.html = html;
 exports.script = script;
 exports.images = images;
+
+exports.cleanghub = cleanghub;
+exports.copyghub = copyghub;
+
 exports.copy = copy;
 exports.watch = watch;
 
 exports.default = build;
 exports.build = build;
 exports.dev = dev;
+
+exports.publish = publish;
